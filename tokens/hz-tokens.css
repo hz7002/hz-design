@@ -1,0 +1,195 @@
+/* hz Design Tokens v1.0 */
+
+:root {
+  /* 基础色阶 */
+  --violet-50: #F4F3FD;
+  --violet-100: #E9E6FB;
+  --violet-200: #D3CDF7;
+  --violet-300: #B5ACF1;
+  --violet-400: #9187E6;
+  --violet-500: #7366D8;
+  --violet-600: #5A4BC6;
+  --violet-700: #4A3CA8;
+  --violet-800: #3A2F85;
+  --violet-900: #282160;
+
+  --gray-0: #FFFFFF;
+  --gray-50: #F7F7FA;
+  --gray-100: #EFEFF4;
+  --gray-200: #E2E2EA;
+  --gray-300: #C9C9D4;
+  --gray-400: #A2A2B0;
+  --gray-500: #7C7C8C;
+  --gray-600: #5E5E6E;
+  --gray-700: #464654;
+  --gray-800: #2E2E38;
+  --gray-900: #1C1C23;
+  --gray-950: #121216;
+
+  /* 语义变量：浅色 */
+  --bg-page: #FFFFFF;
+  --bg-subtle: #F7F7FA;
+  --bg-muted: #EFEFF4;
+  --bg-elevated: #FFFFFF;
+
+  --text-primary: #1C1C23;
+  --text-secondary: #5E5E6E;
+  --text-tertiary: #7C7C8C;
+  --text-disabled: #C9C9D4;
+
+  --border: #E2E2EA;
+  --border-strong: #C9C9D4;
+
+  --brand: #5A4BC6;
+  --brand-hover: #4A3CA8;
+  --brand-active: #3A2F85;
+  --brand-text: #5A4BC6;
+  --brand-subtle: #F4F3FD;
+  --brand-subtle-text: #4A3CA8;
+  --on-brand: #FFFFFF;
+
+  --success: #2E9E6A;
+  --success-bg: #E7F6EE;
+  --success-text: #1D6E49;
+  --warning: #E07A2F;
+  --warning-bg: #FDF0E6;
+  --warning-text: #9A4A12;
+  --danger: #D9433F;
+  --danger-bg: #FCEBEA;
+  --danger-text: #9E2723;
+
+  --focus-ring: rgba(90, 75, 198, 0.35);
+  --overlay: rgba(18, 18, 22, 0.4);
+  --selection: #F4F3FD;
+
+  /* 字体 */
+  --font-display: "Nunito", "Resource Han Rounded SC", "资源圆体", "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+  --font-sans: "Inter", "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+  --font-mono: "JetBrains Mono", "Noto Sans SC", ui-monospace, monospace;
+
+  /* 圆角 */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-full: 999px;
+  --radius-bubble: 16px 16px 16px 4px;
+  --radius-bubble-user: 16px 16px 4px 16px;
+
+  /* 间距 */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-24: 96px;
+
+  /* 阴影 */
+  --shadow-sm: 0 1px 2px rgba(28, 28, 35, 0.06);
+  --shadow-md: 0 4px 16px rgba(28, 28, 35, 0.08);
+  --shadow-lg: 0 12px 40px rgba(28, 28, 35, 0.12);
+
+  /* 动效 */
+  --duration-fast: 120ms;
+  --duration-base: 200ms;
+  --duration-slow: 320ms;
+  --ease-out: cubic-bezier(0.2, 0, 0, 1);
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* 深色模式：跟随系统，除非手动指定浅色 */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg-page: #121216;
+    --bg-subtle: #1C1C23;
+    --bg-muted: #2E2E38;
+    --bg-elevated: #24242C;
+
+    --text-primary: #F7F7FA;
+    --text-secondary: #A2A2B0;
+    --text-tertiary: #7C7C8C;
+    --text-disabled: #464654;
+
+    --border: #2E2E38;
+    --border-strong: #464654;
+
+    --brand: #7366D8;
+    --brand-hover: #6456D0;
+    --brand-active: #5A4BC6;
+    --brand-text: #B5ACF1;
+    --brand-subtle: #282160;
+    --brand-subtle-text: #D3CDF7;
+
+    --success-bg: #12301F;
+    --success-text: #5FC795;
+    --warning-bg: #3A2312;
+    --warning-text: #F0A46A;
+    --danger-bg: #3A1716;
+    --danger-text: #F07C78;
+
+    --focus-ring: rgba(181, 172, 241, 0.45);
+    --overlay: rgba(0, 0, 0, 0.6);
+    --selection: #3A2F85;
+  }
+}
+
+/* 手动指定深色 */
+:root[data-theme="dark"] {
+  --bg-page: #121216;
+  --bg-subtle: #1C1C23;
+  --bg-muted: #2E2E38;
+  --bg-elevated: #24242C;
+
+  --text-primary: #F7F7FA;
+  --text-secondary: #A2A2B0;
+  --text-tertiary: #7C7C8C;
+  --text-disabled: #464654;
+
+  --border: #2E2E38;
+  --border-strong: #464654;
+
+  --brand: #7366D8;
+  --brand-hover: #6456D0;
+  --brand-active: #5A4BC6;
+  --brand-text: #B5ACF1;
+  --brand-subtle: #282160;
+  --brand-subtle-text: #D3CDF7;
+
+  --success-bg: #12301F;
+  --success-text: #5FC795;
+  --warning-bg: #3A2312;
+  --warning-text: #F0A46A;
+  --danger-bg: #3A1716;
+  --danger-text: #F07C78;
+
+  --focus-ring: rgba(181, 172, 241, 0.45);
+  --overlay: rgba(0, 0, 0, 0.6);
+  --selection: #3A2F85;
+}
+
+/* 全局基础 */
+body {
+  background: var(--bg-page);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+::selection {
+  background: var(--selection);
+}
+
+:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px var(--focus-ring);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}

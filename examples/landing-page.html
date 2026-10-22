@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>hz · 把 AI 讲明白的桌面学习伙伴</title>
+<link rel="icon" href="../assets/logo/favicon.svg" type="image/svg+xml">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&amp;family=Nunito:wght@500;700&amp;family=Noto+Sans+SC:wght@400;500;700&amp;family=JetBrains+Mono:wght@400&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+.ls{--bg-page:#FFFFFF;--bg-subtle:#F7F7FA;--bg-muted:#EFEFF4;--bg-elevated:#FFFFFF;--text-primary:#1C1C23;--text-secondary:#5E5E6E;--border:#E2E2EA;--border-strong:#C9C9D4;--brand:#5A4BC6;--brand-hover:#4A3CA8;--brand-active:#3A2F85;--brand-text:#5A4BC6;--brand-subtle:#F4F3FD;--brand-subtle-text:#4A3CA8;--wordmark:#1C1C23;--shadow-lg:0 12px 40px rgba(28,28,35,0.12);
+font-family:"Inter","Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg-page);color:var(--text-primary);line-height:1.75;font-size:16px}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .ls{--bg-page:#121216;--bg-subtle:#1C1C23;--bg-muted:#2E2E38;--bg-elevated:#24242C;--text-primary:#F7F7FA;--text-secondary:#A2A2B0;--border:#2E2E38;--border-strong:#464654;--brand:#7366D8;--brand-hover:#6456D0;--brand-active:#5A4BC6;--brand-text:#B5ACF1;--brand-subtle:#282160;--brand-subtle-text:#D3CDF7;--wordmark:#F7F7FA}}
+[data-theme="dark"] .ls{--bg-page:#121216;--bg-subtle:#1C1C23;--bg-muted:#2E2E38;--bg-elevated:#24242C;--text-primary:#F7F7FA;--text-secondary:#A2A2B0;--border:#2E2E38;--border-strong:#464654;--brand:#7366D8;--brand-hover:#6456D0;--brand-active:#5A4BC6;--brand-text:#B5ACF1;--brand-subtle:#282160;--brand-subtle-text:#D3CDF7;--wordmark:#F7F7FA;--shadow-lg:0 12px 40px rgba(0,0,0,0.4)}
+.ls *{box-sizing:border-box}
+.display{font-family:"Nunito","Resource Han Rounded SC","Noto Sans SC",sans-serif}
+.wrap{max-width:1120px;margin:0 auto;padding:0 32px}
+a{color:var(--brand-text);text-decoration:none}a:hover{color:var(--brand-hover)}
+.btn-p{display:inline-flex;align-items:center;gap:8px;background:var(--brand);color:#FFFFFF;border-radius:10px;font-weight:500;transition:background 120ms cubic-bezier(0.2,0,0,1)}
+.btn-p:hover{background:var(--brand-hover);color:#FFFFFF}
+.btn-p:active{background:var(--brand-active)}
+.btn-s{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--border-strong);color:var(--text-primary);border-radius:10px;font-weight:500;transition:background 120ms cubic-bezier(0.2,0,0,1)}
+.btn-s:hover{background:var(--bg-muted);color:var(--text-primary)}
+.btn-p:focus-visible,.btn-s:focus-visible,.navlink:focus-visible{outline:none;box-shadow:0 0 0 3px rgba(90,75,198,0.35)}
+.navlink{color:var(--text-secondary);font-size:15px}.navlink:hover{color:var(--text-primary)}
+.card{background:var(--bg-page);border:1px solid var(--border);border-radius:16px;padding:24px}
+details{border-bottom:1px solid var(--border)}
+details summary{list-style:none;cursor:pointer;min-height:56px;display:flex;align-items:center;justify-content:space-between;gap:16px;font-weight:500;font-size:17px}
+details summary::-webkit-details-marker{display:none}
+details[open] summary svg{transform:rotate(45deg)}
+summary svg{transition:transform 200ms cubic-bezier(0.2,0,0,1);flex:none}
+@media (max-width:767px){
+.wrap{padding:0 20px}
+.navlinks{display:none !important}
+.hero-title{font-size:36px !important;line-height:44px !important}
+.sec-title{font-size:28px !important;line-height:36px !important}
+.sidebar{display:none !important}
+.split{flex-direction:column !important}
+.split.rev{flex-direction:column !important}
+.sec{padding:64px 0 !important}
+}
+</style>
+
+</head>
+<body>
+
+<div class="ls">
+
+<header style="position: sticky; top: 0; z-index: 10; background: var(--bg-page); border-bottom: 1px solid var(--border)">
+<div class="wrap" style="height: 64px; display: flex; align-items: center; justify-content: space-between; gap: 24px">
+<a href="#top" aria-label="hz 首页" style="display: flex; align-items: center; gap: 10px">
+<span style="display: inline-block; width: 25px; height: 20px; background: var(--brand); border-radius: 8px 8px 8px 3px"></span>
+<span class="display" style="font-size: 22px; font-weight: 500; letter-spacing: -0.2px"><span style="color: var(--wordmark)">h</span><span style="color: var(--brand-text)">z</span></span>
+</a>
+<nav class="navlinks" aria-label="主导航" style="display: flex; align-items: center; gap: 32px">
+<a class="navlink" href="#features">功能</a>
+<a class="navlink" href="#how">怎么用</a>
+<a class="navlink" href="#faq">常见问题</a>
+<a class="navlink" href="#content">内容频道</a>
+</nav>
+<a class="btn-p" href="#download" style="height: 36px; padding: 0 16px; font-size: 14px">下载桌面版</a>
+</div>
+</header>
+
+<section id="top" class="sec" style="padding: 96px 0 64px">
+<div class="wrap" style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 24px">
+<span style="display: inline-flex; align-items: center; height: 26px; padding: 0 10px; border-radius: 6px; background: var(--brand-subtle); color: var(--brand-subtle-text); font-size: 13px; font-weight: 500">macOS 与 Windows 桌面版</span>
+<div style="background: var(--brand-subtle); border-radius: 24px 24px 24px 6px; padding: 20px 32px">
+<h1 class="display hero-title" style="margin: 0; font-size: 56px; line-height: 68px; font-weight: 700; letter-spacing: -0.5px; color: var(--text-primary)">把 AI 讲明白的<br>桌面学习伙伴</h1>
+</div>
+<p style="margin: 0; max-width: 560px; font-size: 18px; line-height: 32px; color: var(--text-secondary)">不懂的概念，随手一问。hz 用大白话、例子和小图，陪你从零学会用 AI。</p>
+<div style="display: flex; gap: 12px; flex-wrap: wrap; justify-content: center">
+<a class="btn-p" href="#download" style="height: 48px; padding: 0 24px; font-size: 16px">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11"/><path d="m7 10 5 5 5-5"/><path d="M5 20h14"/></svg>
+下载 macOS 版</a>
+<a class="btn-s" href="#features" style="height: 48px; padding: 0 24px; font-size: 16px">看看能做什么</a>
+</div>
+<p style="margin: 0; font-size: 13px; color: var(--text-secondary)">免费下载 · 也有 <a href="#download">Windows 版</a></p>
+</div>
+
+<div class="wrap" style="margin-top: 64px">
+<div style="background: var(--bg-subtle); border-radius: 24px; padding: 40px 32px 0; overflow: hidden">
+<div role="img" aria-label="hz 桌面应用界面示意：左侧课程导航，右侧 AI 对话讲解" style="max-width: 960px; margin: 0 auto; background: var(--bg-page); border: 1px solid var(--border); border-bottom: none; border-radius: 16px 16px 0 0; box-shadow: var(--shadow-lg); overflow: hidden">
+<div style="height: 44px; display: flex; align-items: center; gap: 8px; padding: 0 16px; background: var(--bg-subtle); border-bottom: 1px solid var(--border)">
+<span style="width: 12px; height: 12px; border-radius: 999px; background: var(--border-strong)"></span>
+<span style="width: 12px; height: 12px; border-radius: 999px; background: var(--border-strong)"></span>
+<span style="width: 12px; height: 12px; border-radius: 999px; background: var(--border-strong)"></span>
+</div>
+<div style="display: flex; min-height: 420px">
+<div class="sidebar" style="width: 220px; flex: none; background: var(--bg-subtle); border-right: 1px solid var(--border); padding: 16px 12px; display: flex; flex-direction: column; gap: 4px; text-align: left">
+<div style="display: flex; align-items: center; gap: 8px; padding: 4px 8px 16px"><span style="display: inline-block; width: 18px; height: 14px; background: var(--brand); border-radius: 6px 6px 6px 2px"></span><span style="font-size: 14px; font-weight: 500">hz</span></div>
+<div style="height: 32px; display: flex; align-items: center; gap: 8px; padding: 0 8px; border-radius: 8px; background: var(--brand-subtle); color: var(--brand-subtle-text); font-size: 14px">
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12Z"/></svg>随手问</div>
+<div style="height: 32px; display: flex; align-items: center; gap: 8px; padding: 0 8px; border-radius: 8px; color: var(--text-secondary); font-size: 14px">
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h6a2 2 0 0 1 2 2v12a2 2 0 0 0-2-2H4z"/><path d="M20 5h-6a2 2 0 0 0-2 2v12a2 2 0 0 1 2-2h6z"/></svg>入门课</div>
+<div style="height: 32px; display: flex; align-items: center; gap: 8px; padding: 0 8px; border-radius: 8px; color: var(--text-secondary); font-size: 14px">
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 4h8v16l-4-3-4 3z"/></svg>我的笔记</div>
+<div style="font-size: 12px; color: var(--text-secondary); padding: 16px 8px 4px">最近</div>
+<div style="font-size: 13px; color: var(--text-secondary); padding: 4px 8px">什么是 Token</div>
+<div style="font-size: 13px; color: var(--text-secondary); padding: 4px 8px">提示词怎么写</div>
+</div>
+<div style="flex: 1; min-width: 0; padding: 24px; display: flex; flex-direction: column; gap: 12px; text-align: left">
+<div style="align-self: flex-end; max-width: 80%; background: var(--bg-muted); border-radius: 16px 16px 4px 16px; padding: 10px 14px; font-size: 14px; line-height: 22px">AI 为什么会一本正经地胡说？</div>
+<div style="align-self: flex-start; max-width: 85%; background: var(--brand-subtle); border-radius: 16px 16px 16px 4px; padding: 12px 16px; font-size: 14px; line-height: 24px">因为它在预测“下一个最可能的字”，而不是在查资料。这种现象叫 <span style="color: var(--brand-text); font-weight: 500">幻觉</span>。<br>举个例子：你问它一本不存在的书，它也可能编出作者和简介。</div>
+<div style="align-self: flex-start; display: flex; gap: 8px; flex-wrap: wrap">
+<span style="height: 28px; display: inline-flex; align-items: center; padding: 0 10px; border: 1px solid var(--border-strong); border-radius: 10px; font-size: 13px; color: var(--text-secondary)">怎么避免？</span>
+<span style="height: 28px; display: inline-flex; align-items: center; padding: 0 10px; border: 1px solid var(--border-strong); border-radius: 10px; font-size: 13px; color: var(--text-secondary)">存进笔记</span>
+</div>
+<div style="margin-top: auto; height: 56px; border: 1px solid var(--border); border-radius: 10px; display: flex; align-items: center; justify-content: space-between; padding: 0 8px 0 16px">
+<span style="font-size: 14px; color: var(--text-secondary)">问点什么，比如“帮我解释 RAG”</span>
+<span style="width: 36px; height: 36px; border-radius: 10px; background: var(--brand); display: inline-flex; align-items: center; justify-content: center; color: #FFFFFF">
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5"/><path d="m5 12 7-7 7 7"/></svg></span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="features" class="sec" style="padding: 96px 0">
+<div class="wrap">
+<h2 class="display sec-title" style="margin: 0 0 12px; font-size: 36px; line-height: 44px; font-weight: 700">学 AI，不用先学术语</h2>
+<p style="margin: 0 0 48px; font-size: 18px; line-height: 32px; color: var(--text-secondary); max-width: 560px">三件事，帮你把“听说过”变成“会用了”。</p>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px">
+<div class="card">
+<div style="width: 44px; height: 44px; border-radius: 10px; background: var(--brand-subtle); color: var(--brand-text); display: flex; align-items: center; justify-content: center; margin-bottom: 16px">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12Z"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.6.3-1 .8-1 1.5"/><path d="M12 16h.01"/></svg></div>
+<h3 style="margin: 0 0 8px; font-size: 20px; line-height: 28px; font-weight: 500">随手一问，大白话回答</h3>
+<p style="margin: 0; font-size: 15px; line-height: 26px; color: var(--text-secondary)">任何 AI 概念都能问，回答先给一句话结论，再给例子。</p>
+</div>
+<div class="card">
+<div style="width: 44px; height: 44px; border-radius: 10px; background: var(--brand-subtle); color: var(--brand-text); display: flex; align-items: center; justify-content: center; margin-bottom: 16px">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h6a2 2 0 0 1 2 2v12a2 2 0 0 0-2-2H4z"/><path d="M20 5h-6a2 2 0 0 0-2 2v12a2 2 0 0 1 2-2h6z"/></svg></div>
+<h3 style="margin: 0 0 8px; font-size: 20px; line-height: 28px; font-weight: 500">一节五分钟的入门课</h3>
+<p style="margin: 0; font-size: 15px; line-height: 26px; color: var(--text-secondary)">从“什么是大模型”到“怎么写提示词”，按顺序一点点学。</p>
+</div>
+<div class="card">
+<div style="width: 44px; height: 44px; border-radius: 10px; background: var(--brand-subtle); color: var(--brand-text); display: flex; align-items: center; justify-content: center; margin-bottom: 16px">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 4h8v16l-4-3-4 3z"/></svg></div>
+<h3 style="margin: 0 0 8px; font-size: 20px; line-height: 28px; font-weight: 500">学过的都存进笔记</h3>
+<p style="margin: 0; font-size: 15px; line-height: 26px; color: var(--text-secondary)">好的回答一键收藏，复习时按主题找回来。</p>
+</div>
+</div>
+</div>
+</section>
+
+<section id="how" class="sec" style="padding: 96px 0; background: var(--bg-subtle)">
+<div class="wrap" style="display: flex; flex-direction: column; gap: 96px">
+<div class="split" style="display: flex; align-items: center; gap: 64px">
+<div style="flex: 1 1 0; min-width: 0">
+<span style="font-size: 14px; font-weight: 500; color: var(--brand-text)">01 · 提问</span>
+<h2 class="display sec-title" style="margin: 8px 0 16px; font-size: 32px; line-height: 40px; font-weight: 700">问得再“小白”也没关系</h2>
+<p style="margin: 0; font-size: 17px; line-height: 30px; color: var(--text-secondary)">不需要懂术语，用你自己的话问。hz 会先确认你想问什么，再一步步解释，像一个有耐心的同学。</p>
+</div>
+<div style="flex: 1 1 0; min-width: 0; background: var(--bg-page); border: 1px solid var(--border); border-radius: 16px; padding: 24px; display: flex; flex-direction: column; gap: 12px">
+<div style="align-self: flex-end; background: var(--bg-muted); border-radius: 16px 16px 4px 16px; padding: 10px 14px; font-size: 15px">Token 到底是什么？</div>
+<div style="align-self: flex-start; background: var(--brand-subtle); border-radius: 16px 16px 16px 4px; padding: 12px 16px; font-size: 15px; line-height: 26px">可以理解成 AI 读字的“小块”。一个汉字大约是一到两个 Token，计费和长度限制都按它算。</div>
+</div>
+</div>
+<div class="split rev" style="display: flex; flex-direction: row-reverse; align-items: center; gap: 64px">
+<div style="flex: 1 1 0; min-width: 0">
+<span style="font-size: 14px; font-weight: 500; color: var(--brand-text)">02 · 练习</span>
+<h2 class="display sec-title" style="margin: 8px 0 16px; font-size: 32px; line-height: 40px; font-weight: 700">看懂了，再动手试一次</h2>
+<p style="margin: 0; font-size: 17px; line-height: 30px; color: var(--text-secondary)">每个知识点都配一个能直接复制的提示词，改一改就能拿去用，学完马上有结果。</p>
+</div>
+<div style="flex: 1 1 0; min-width: 0; background: var(--bg-page); border: 1px solid var(--border); border-radius: 16px; padding: 24px">
+<div style="font-size: 13px; color: var(--text-secondary); margin-bottom: 8px">提示词模板</div>
+<div style="background: var(--bg-subtle); border-radius: 10px; padding: 16px; font-family: 'JetBrains Mono','Noto Sans SC',monospace; font-size: 14px; line-height: 24px">你是一位<span style="color: var(--brand-text)">[角色]</span>。<br>请用<span style="color: var(--brand-text)">[3 句话]</span>向<span style="color: var(--brand-text)">[初学者]</span>解释<span style="color: var(--brand-text)">[概念]</span>，<br>并举一个生活中的例子。</div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="content" class="sec" style="padding: 96px 0">
+<div class="wrap">
+<h2 class="display sec-title" style="margin: 0 0 12px; font-size: 36px; line-height: 44px; font-weight: 700">在这些地方也能找到 hz</h2>
+<p style="margin: 0 0 48px; font-size: 18px; line-height: 32px; color: var(--text-secondary)">每周更新 AI 科普图文和短视频。</p>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px">
+<a href="#" class="card" style="display: flex; flex-direction: column; gap: 4px; color: var(--text-primary)"><span style="font-weight: 500">小红书</span><span style="font-size: 14px; color: var(--text-secondary)">[粉丝数]</span></a>
+<a href="#" class="card" style="display: flex; flex-direction: column; gap: 4px; color: var(--text-primary)"><span style="font-weight: 500">B 站</span><span style="font-size: 14px; color: var(--text-secondary)">[粉丝数]</span></a>
+<a href="#" class="card" style="display: flex; flex-direction: column; gap: 4px; color: var(--text-primary)"><span style="font-weight: 500">抖音</span><span style="font-size: 14px; color: var(--text-secondary)">[粉丝数]</span></a>
+<a href="#" class="card" style="display: flex; flex-direction: column; gap: 4px; color: var(--text-primary)"><span style="font-weight: 500">公众号</span><span style="font-size: 14px; color: var(--text-secondary)">[读者数]</span></a>
+</div>
+</div>
+</section>
+
+<section id="faq" class="sec" style="padding: 96px 0; background: var(--bg-subtle)">
+<div class="wrap" style="max-width: 800px">
+<h2 class="display sec-title" style="margin: 0 0 32px; font-size: 36px; line-height: 44px; font-weight: 700">常见问题</h2>
+<details>
+<summary>完全没基础可以用吗？<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary>
+<p style="margin: 0 0 20px; color: var(--text-secondary)">可以。它就是为零基础的学生和职场人设计的，每个回答都会避开不必要的术语。</p>
+</details>
+<details>
+<summary>收费吗？<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary>
+<p style="margin: 0 0 20px; color: var(--text-secondary)">[填写你的定价方案]</p>
+</details>
+<details>
+<summary>支持哪些系统？<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary>
+<p style="margin: 0 0 20px; color: var(--text-secondary)">macOS 与 Windows。[填写最低系统版本]</p>
+</details>
+<details>
+<summary>我的提问记录会被用来做什么？<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary>
+<p style="margin: 0 0 20px; color: var(--text-secondary)">[填写你的隐私说明]</p>
+</details>
+</div>
+</section>
+
+<section id="download" class="sec" style="padding: 96px 0; background: #121216">
+<div class="wrap" style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 24px">
+<div style="background: #282160; border-radius: 24px 24px 24px 6px; padding: 18px 28px">
+<h2 class="display sec-title" style="margin: 0; font-size: 40px; line-height: 52px; font-weight: 700; color: #F7F7FA">慢慢讲，讲明白</h2>
+</div>
+<p style="margin: 0; font-size: 18px; line-height: 32px; color: #A2A2B0">今天就开始，你的第一个 AI 问题。</p>
+<div style="display: flex; gap: 12px; flex-wrap: wrap; justify-content: center">
+<a href="#" style="display: inline-flex; align-items: center; gap: 8px; height: 48px; padding: 0 24px; border-radius: 10px; background: #7366D8; color: #FFFFFF; font-weight: 500">下载 macOS 版</a>
+<a href="#" style="display: inline-flex; align-items: center; gap: 8px; height: 48px; padding: 0 24px; border-radius: 10px; border: 1px solid #464654; color: #F7F7FA; font-weight: 500">下载 Windows 版</a>
+</div>
+</div>
+</section>
+
+<footer style="background: var(--bg-subtle); border-top: 1px solid var(--border); padding: 48px 0">
+<div class="wrap" style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 24px; font-size: 14px; color: var(--text-secondary)">
+<div style="display: flex; flex-direction: column; gap: 8px">
+<div style="display: flex; align-items: center; gap: 8px"><span style="display: inline-block; width: 20px; height: 16px; background: var(--brand); border-radius: 6px 6px 6px 2px"></span><span class="display" style="font-size: 18px; font-weight: 500"><span style="color: var(--wordmark)">h</span><span style="color: var(--brand-text)">z</span></span></div>
+<span>慢慢讲，讲明白</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px; align-items: flex-start">
+<span>© 2026 hz</span>
+<span>[备案号]</span>
+</div>
+</div>
+</footer>
+
+</div>
+
+</body>
+</html>
